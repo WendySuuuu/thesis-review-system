@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>管理会计论坛征文审稿专家意见收集</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>管理会计论坛征文审稿专家意见收集</h1>
+            <p class="subtitle">请专家对审稿文章进行分类评价</p>
+        </header>
+
+        <!-- 专家选择部分 -->
+        <div class="card" id="expert-selection">
+            <h2>请选择您的姓名</h2>
+            <div class="expert-selector">
+                <button class="expert-btn" data-expert="陈磊">陈磊</button>
+                <button class="expert-btn" data-expert="刘志远">刘志远</button>
+                <button class="expert-btn" data-expert="吕长江">吕长江</button>
+                <button class="expert-btn" data-expert="潘飞">潘飞</button>
+                <button class="expert-btn" data-expert="汤谷良">汤谷良</button>
+                <button class="expert-btn" data-expert="王立彦">王立彦</button>
+                <button class="expert-btn" data-expert="谢志华">谢志华</button>
+                <button class="expert-btn" data-expert="许定波">许定波</button>
+            </div>
+            
+            <div class="action-buttons">
+                <button class="action-btn view-results-btn" id="view-results-btn">查阅结果</button>
+                <button class="action-btn export-btn" id="export-btn">导出结果</button>
+            </div>
+        </div>
+
+        <!-- 文章审阅部分 -->
+        <div class="card" id="articles-section" style="display: none;">
+            <h2 id="expert-name-display"></h2>
+            <p>请对以下文章进行分类评价：</p>
+            
+            <div class="progress-bar">
+                <div class="progress-fill" id="progress-fill"></div>
+            </div>
+            <div class="progress-text" id="progress-text">0/0 已完成</div>
+            
+            <div id="articles-list">
+                <!-- 文章列表将通过JavaScript动态生成 -->
+            </div>
+            
+            <button class="submit-btn" id="submit-ratings">提交评价</button>
+        </div>
+
+        <!-- 结果统计部分 -->
+        <div class="card results-section" id="results-section">
+            <h2>审稿结果统计</h2>
+            
+            <!-- 统计表格 -->
+            <table class="results-table">
+                <thead>
+                    <tr>
+                        <th>专家</th>
+                        <th>推荐获奖</th>
+                        <th>杂志论文备选</th>
+                        <th>均不推荐</th>
+                        <th>待评价</th>
+                        <th>完成率</th>
+                    </tr>
+                </thead>
+                <tbody id="results-body">
+                    <!-- 结果将通过JavaScript动态生成 -->
+                </tbody>
+            </table>
+            
+            <!-- 推荐获奖文章列表 -->
+            <div class="recommended-articles">
+                <h3>推荐获奖文章</h3>
+                <div id="recommended-articles-list">
+                    <!-- 推荐获奖文章将通过JavaScript动态生成 -->
+                </div>
+            </div>
+            
+            <!-- 杂志论文备选文章列表 -->
+            <div class="magazine-articles">
+                <h3>杂志论文备选文章</h3>
+                <div id="magazine-articles-list">
+                    <!-- 杂志论文备选文章将通过JavaScript动态生成 -->
+                </div>
+            </div>
+            
+            <div class="action-buttons">
+                <button class="action-btn export-btn" id="export-results-btn">导出结果</button>
+                <button class="back-btn" id="back-to-review">返回审阅</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
